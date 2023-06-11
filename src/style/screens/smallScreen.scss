@@ -1,0 +1,49 @@
+@media screen and (max-width: 767px) {
+	.wrapper {
+		max-width: 100%;
+	}
+	.container {
+		grid-template-columns: 1fr; /* Stacks the two columns on top of each other */
+	}
+
+	.name {
+		font-size: 6em;
+	}
+
+	.role {
+		font-size: 2em;
+	}
+
+	.links {
+		display: flex;
+		flex-direction: row;
+		column-gap: 1em;
+		width: 100%;
+	}
+
+	.link {
+		font-size: 1.5em;
+	}
+
+	.right,
+	.left {
+		font-size: 1em; /* Adjust as needed */
+	}
+
+	.text {
+		font-size: 1.5em;
+	}
+
+	.right {
+		margin-top: 3em;
+	}
+
+	.img-profile {
+		width: 400px;
+	}
+	
+	.image-container {
+		width: 400px;
+		height: 400px;
+	}
+}

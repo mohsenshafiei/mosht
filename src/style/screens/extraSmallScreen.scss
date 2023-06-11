@@ -1,0 +1,40 @@
+@media screen and (max-width: 479px) {
+	.wrapper {
+		max-width: 100%;
+	}
+	.container {
+		grid-template-columns: 1fr; /* Stacks the two columns on top of each other */
+	}
+
+	.name {
+		font-size: 3em;
+	}
+
+	.role {
+		font-size: 1.2em;
+	}
+
+	.links {
+		display: flex;
+		flex-direction: row;
+		column-gap: 0.75em;
+		width: 100%;
+	}
+
+	.link {
+		font-size: 1em;
+	}
+
+	.right,
+	.left {
+		font-size: 1em; /* Adjust as needed */
+	}
+
+	.text {
+		font-size: 1em;
+	}
+
+	.right {
+		display: none;
+	}
+}

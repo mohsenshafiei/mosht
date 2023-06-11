@@ -1,6 +1,7 @@
 @import "./style/reset.css";
 @import "./style/color.css";
 
+
 :root {
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
@@ -49,7 +50,7 @@ body {
 	place-items: center;
 	justify-content: center;
 	flex-direction: column;
-  z-index: 2;
+	z-index: 2;
 }
 
 .right {
@@ -66,11 +67,7 @@ body {
 	font-size: 6em;
 	font-family: "Bebas Neue";
 	color: var(--ds-amber-600);
-	// background-image: -webkit-linear-gradient(45deg, #7319fa, #ff33b4, #ff7e29);
-	// background-clip: text;
-	// -webkit-background-clip: text;
-	// -webkit-text-fill-color: transparent;
-  user-select: none;
+	user-select: none;
 	&:hover {
 		color: var(--ds-amber-700);
 	}
@@ -78,7 +75,7 @@ body {
 
 .role {
 	font-size: 2.2em;
-  user-select: none;
+	user-select: none;
 }
 
 .card {
@@ -94,32 +91,32 @@ body {
 
 .company {
 	color: var(--ds-amber-600);
-	
+
 	&:hover {
-		color: var(--ds-amber-700)
+		color: var(--ds-amber-700);
 	}
 }
 
 .links {
-  display: flex;
-  flex-direction: row;
-  column-gap: 2em;
-  width: 100%;
+	display: flex;
+	flex-direction: row;
+	column-gap: 2em;
+	width: 100%;
 }
 
 .link {
-  color:var(--geist-cyan-dark);
+	color: var(--geist-cyan-dark);
 	font-size: 1.2em;
 	text-decoration: none;
 	&:hover {
-		color: var(--geist-cyan)
+		color: var(--geist-cyan);
 	}
 }
 
 .img-profile {
 	border-radius: 50%;
 	margin: 0 auto;
-	width: 500px;	
+	width: 500px;
 	border: 1px solid var(--ds-blue-700);
 }
 
@@ -163,42 +160,40 @@ body {
 	color: white;
 }
 
-
 $lineCount: 20;
-$backgroundColors: #5500aa80, #aa2b0070, #00d5ff70, #00AA2B70, #AA800070, #AAFF0070, #D5005570, #00FFFF70, #2B002B70, #00558070, #FF557F70, #85B08570;
+$backgroundColors: #5500aa80, #aa2b0070, #00d5ff70, #00aa2b70, #aa800070,
+	#aaff0070, #d5005570, #00ffff70, #2b002b70, #00558070, #ff557f70, #85b08570;
 $elementTypes: h, b;
 
 @each $type in $elementTypes {
-  @for $i from 1 through $lineCount {
-    $top: 30px * ($i - 1);
-    $delay: if($i > 7, $i - 7, $i - 1);
-    $colorIndex: $i % length($backgroundColors);
-    $element: if($type == h, "lineh", "lineb");
+	@for $i from 1 through $lineCount {
+		$top: 30px * ($i - 1);
+		$delay: if($i > 7, $i - 7, $i - 1);
+		$colorIndex: $i % length($backgroundColors);
+		$element: if($type == h, "lineh", "lineb");
 
-    ##{$element}#{$i} {
-      position: absolute;
+		##{$element}#{$i} {
+			position: absolute;
 			z-index: 1;
-      left: if($i % 2 == 0, null, 0);
-      right: if($i % 2 == 0, 0, null);
-      top: if($type == h, $top, null);
-      bottom: if($type == b, $top, null);
-      height: 1px;
-      background: nth($backgroundColors, $colorIndex + 1);
-      animation: lineH calc(4s + #{$i * 0.5s} + #{$delay * 1s}) infinite linear;
-    }
-  }
+			left: if($i % 2 == 0, null, 0);
+			right: if($i % 2 == 0, 0, null);
+			top: if($type == h, $top, null);
+			bottom: if($type == b, $top, null);
+			height: 1px;
+			background: nth($backgroundColors, $colorIndex + 1);
+			animation: lineH calc(4s + #{$i * 0.5s} + #{$delay * 1s}) infinite linear;
+		}
+	}
 }
 
-
-
-
-@keyframes lineH{
-  0%{
-    width: 0%;
-  }
-  100%{
-    width: 95%;opacity: 0;
-  }
+@keyframes lineH {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 95%;
+		opacity: 0;
+	}
 }
 
 @media (prefers-color-scheme: light) {
@@ -213,3 +208,10 @@ $elementTypes: h, b;
 		background-color: #f9f9f9;
 	}
 }
+
+
+// media queries - specificity is important
+@import "./style/screens/mediumLargeScreen.scss";
+@import "./style/screens/smallMediumScreen.scss";
+@import "./style/screens/smallScreen.scss";
+@import "./style/screens/extraSmallScreen.scss";

@@ -1,0 +1,55 @@
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.right,
+	.left {
+		font-size: 2em; /* Adjust as needed */
+	}
+
+	.wrapper {
+		max-width: 100%;
+	}
+
+	.container {
+		grid-template-columns: 1fr; /* Keeps the two column layout */
+	}
+
+	.name {
+		font-size: 5em;
+	}
+
+	.role {
+		font-size: 1.8em;
+	}
+
+	.links {
+		display: flex;
+		flex-direction: row;
+		column-gap: 1em;
+		width: 100%;
+	}
+
+	.link {
+		font-size: 1.5em;
+	}
+
+	.right,
+	.left {
+		font-size: 1em; /* Adjust as needed */
+	}
+
+	.text {
+		font-size: 1.5em;
+	}
+
+	.right {
+		margin-top: 3em;
+	}
+
+	.img-profile {
+		width: 400px;
+	}
+	
+	.image-container {
+		width: 400px;
+		height: 400px;
+	}
+}
