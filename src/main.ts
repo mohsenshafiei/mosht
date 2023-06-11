@@ -1,27 +1,31 @@
 // Styles
 import "./style.scss";
 
+// Constants
+const NAME = "Mohsen Shafiei";
+const ROLE = "Frontend Software Engineer";
+const PHONE_NUMBER = "+6584358541";
+const EMAIL = "mohsenshafieitafreshi@gmail.com";
+const LINES = 20;
+
 const appElement = document.querySelector<HTMLDivElement>("#app");
 if (appElement) {
 	const lines = [];
-	for (let i = 1; i <= 20; i++) {
+	for (let i = 1; i <= LINES; i++) {
 		lines.push(`<div id="lineh${i}"></div>`);
 	}
 
-	for (let i = 1; i <= 20; i++) {
+	for (let i = 1; i <= LINES; i++) {
 		lines.push(`<div id="lineb${i}"></div>`);
 	}
-
-	const PHONE_NUMBER = "+6584358541";
-	const EMAIL = "mohsenshafieitafreshi@gmail.com";
 
 	const content = `
     <div class="wrapper">
       ${lines.join("")}
       <div class="container">
         <div class="left">
-          <h1 class="name">Mohsen Shafiei</h1>
-          <h2 class="role">Frontend Software Engineer</h2>
+          <h1 class="name">${NAME}</h1>
+          <h2 class="role">${ROLE}</h2>
           <div class="card">
             <p class="text">
               Welcome to my personal website! I am a passionate frontend software engineer with over 6 years of experience in building web applications and developing UI kits. Throughout my career, I have had the privilege of working at esteemed companies such as <span class="company">Apple</span>, <span class="company">Shopee</span>, <span class="company">Snapp</span>, and more. As a dedicated professional, I have led a team of 5 talented engineers, collaborating closely to deliver high-quality projects. I thrive on challenges and enjoy finding innovative solutions to complex problems. With a strong focus on user experience and cutting-edge technologies, I am committed to creating seamless and visually stunning interfaces.
