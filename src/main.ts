@@ -4,12 +4,11 @@ import "./style.scss";
 // Constants
 const NAME = "Mohsen Shafiei";
 const ROLE = "Frontend Software Engineer";
-const PHONE_NUMBER = "+6584358541";
+const PHONE_NUMBER = "+14387798898";
 const EMAIL = "mohsenshafieitafreshi@gmail.com";
 const LINES = 20;
 const GITHUB = "https://github.com/mohsenshafiei";
-const LINKEDIN =
-	"https://www.linkedin.com/in/mohsen-shafiei-tafreshi-7250847b/";
+const LINKEDIN = "https://www.linkedin.com/in/mohsen-shafiei-7250847b/";
 
 const appElement = document.querySelector<HTMLDivElement>("#app");
 if (appElement) {
