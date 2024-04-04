@@ -1,0 +1,260 @@
+@import "./style/reset.css";
+@import "./style/color.css";
+
+:root {
+	font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+		"Arial", sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	color-scheme: light dark;
+	color: var(--ds-gray-1000);
+	background-color: #000; /* Corrected */
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	position: relative;
+	z-index: 0;
+}
+
+* {
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: calc(100vw - 30%);
+	margin: 0 auto;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* Two equal columns */
+	height: 100vh; /* Adjust the height as needed */
+	min-height: 100vh;
+}
+
+.right,
+.left {
+	display: flex;
+	flex: 1;
+	place-items: start;
+	justify-content: center;
+	flex-direction: column;
+	z-index: 2;
+}
+
+.left {
+	text-align: right;
+	row-gap: 2em;
+}
+
+.info {
+	display: flex;
+	column-gap: 2em;
+}
+
+.details {
+	text-align: left;
+	display: flex;
+	align-items: left;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.name {
+	font-size: 2em;
+	font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+		"Arial", sans-serif;
+	font-weight: 700;
+	color: var(--ds-gray-1000);
+	user-select: none;
+	overflow: hidden; /* Prevents overflow during animation */
+	display: inline-block; /* Needed for overflow handling */
+	white-space: nowrap; /* Keeps the text in a single line */
+}
+
+.omit {
+	display: inline-block;
+	vertical-align: top;
+	color: var(--ds-gray-1000);
+	max-width: 0; /* Start with .omit collapsed */
+	overflow: hidden; /* Hide the text initially */
+	transition: max-width 0.5s ease; /* Animate the max-width */
+	will-change: max-width; /* Optimizes the property to be animated */
+	-webkit-text-stroke: 0.2vw #2225;
+	font-weight: 500;
+}
+
+.name:hover .omit {
+	max-width: 120px; /* Adjust based on the actual width of the .omit content */
+}
+
+/* Optional: To animate the "Shafiei" part as well */
+.name {
+	transition: transform 0.5s ease;
+}
+
+.name:hover {
+	transform: translateX(
+		calc(0 - 100%)
+	); /* Move "Shafiei" to accommodate the revealed "hsen" */
+}
+
+.role {
+	font-size: 1.6em;
+	font-weight: 400;
+	user-select: none;
+	color: var(--ds-gray-900);
+}
+
+.text {
+	color: var(--ds-gray-900);
+	font-size: 1.2em;
+	text-align: justify;
+	justify-content: center;
+}
+
+.company {
+	color: var(--ds-amber-600);
+	&:hover {
+		color: var(--ds-amber-700);
+	}
+}
+
+.links {
+	display: flex;
+	flex-direction: row;
+	column-gap: 2em;
+	width: 100%;
+}
+
+.link {
+	color: var(--geist-cyan-dark);
+	font-size: 16px;
+	text-decoration: none;
+	&:hover {
+		color: var(--geist-cyan);
+	}
+}
+
+.img-profile {
+	border-radius: 50%;
+	margin: 0 auto;
+	width: 500px;
+	border: 1px solid var(--ds-blue-700);
+}
+
+.hello {
+	background-color: var(--ds-blue-900);
+}
+
+.sign {
+	width: 180px;
+	background-color: 000;
+	-webkit-filter: invert(100%); /* Safari/Chrome */
+	filter: invert(100%);
+	transform: rotate(-10deg);
+	margin-left: 60px;
+}
+
+.call {
+	border: 1px solid var(--geist-cyan-dark);
+	background-color: var(--geist-cyan-dark);
+}
+
+.image-container {
+	position: relative;
+	display: flex;
+	height: 120px;
+	width: 120px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	border: 1px solid var(--ds-gray-400);
+}
+
+.img-profile {
+	width: 110px;
+	height: 110px;
+}
+
+.txt-container {
+	position: relative;
+	width: 500px;
+	height: 100px;
+}
+
+.navbar {
+	position: fixed;
+	bottom: 0;
+	height: 100px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+}
+
+.navContainer {
+	width: max-content;
+	border-radius: 32px;
+	border: 1px solid var(--ds-gray-200);
+	padding: 4px 4px;
+	display: flex;
+	column-gap: 8px;
+}
+
+.nav {
+	padding: 4px 18px;
+	text-decoration: none;
+	font-size: 14px;
+	color: var(--ds-gray-600);
+	cursor: pointer;
+}
+
+.activeNav {
+	background-color: var(--ds-gray-100);
+	border-radius: 25px;
+	color: var(--geist-cyan);
+}
+
+.nav:hover {
+	color: var(--geist-cyan);
+}
+
+.disable:hover {
+	color: var(--ds-gray-600);
+	cursor: not-allowed;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+	a:hover {
+		color: #747bff;
+	}
+	button {
+		background-color: #f9f9f9;
+	}
+}
+
+@import "./style/screens/mediumLargeScreen.css";
+@import "./style/screens/smallMediumScreen.css";
+@import "./style/screens/smallScreen.css";
+@import "./style/screens/extraSmallScreen.css";

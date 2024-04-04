@@ -8,6 +8,11 @@
 			rel="stylesheet"
 		/>
 		<link
+			href="https://fonts.googleapis.com/css?family=Fira Code"
+			rel="stylesheet"
+		/>
+		<link href="./src/style.css" rel="stylesheet" />
+		<link
 			href="https://fonts.googleapis.com/css?family=Bebas Neue"
 			rel="stylesheet"
 		/>
@@ -29,16 +34,131 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 		<link rel="manifest" href="/site.webmanifest" />
 		<title>Mohsen Shafiei</title>
-		<meta property="og:title" content="Home" data-react-helmet="true">
-		<meta property="og:description" content="I'm Mohsen Shafiei and I am a frontend engineer. I am from Iran and I live in Montreal, QC, Canada" data-react-helmet="true">
-		<meta property="og:type" content="Home" data-react-helmet="true">
-		<meta name="twitter:card" content="I'm Mohsen Shafiei and I am a frontend engineer. I am from Iran and I live in Montreal, QC, Canada" data-react-helmet="true">
-		<meta name="twitter:creator" content="@mohsenshafiei" data-react-helmet="true">
-		<meta name="twitter:title" content="Home" data-react-helmet="true">
-		<meta name="twitter:description" content="I'm Mohsen Shafiei and I am a frontend engineer. I am from Iran and I live in Montreal, QC, Canada" data-react-helmet="true">
+		<meta property="og:title" content="Home" data-react-helmet="true" />
+		<meta
+			property="og:description"
+			content="I'm Mohsen Shafiei and I am a frontend engineer. I am from Iran and I live in Montreal, QC, Canada"
+			data-react-helmet="true"
+		/>
+		<meta property="og:type" content="Home" data-react-helmet="true" />
+		<meta
+			name="twitter:card"
+			content="I'm Mohsen Shafiei and I am a frontend engineer. I am from Iran and I live in Montreal, QC, Canada"
+			data-react-helmet="true"
+		/>
+		<meta
+			name="twitter:creator"
+			content="@mohsenshafiei"
+			data-react-helmet="true"
+		/>
+		<meta name="twitter:title" content="Home" data-react-helmet="true" />
+		<meta
+			name="twitter:description"
+			content="I'm Mohsen Shafiei and I am a frontend engineer. I am from Iran and I live in Montreal, QC, Canada"
+			data-react-helmet="true"
+		/>
 	</head>
+	<script>
+		document.addEventListener("mousemove", function (e) {
+			var followCursor = document.getElementById("follow-cursor");
+			// Update the position to the cursor's position
+			followCursor.style.left = e.pageX + "px";
+			followCursor.style.top = e.pageY + "px";
+		});
+	</script>
 	<body>
-		<div id="app"></div>
-		<script type="module" src="/src/main.ts"></script>
+		<div class="wrapper">
+			<div class="container">
+				<div class="left">
+					<div class="info">
+						<div class="image-container">
+							<img
+								id="image1"
+								class="img-profile hello fade-image"
+								src="hello.png"
+								alt="Image 1"
+							/>
+						</div>
+						<div class="details">
+							<h1 class="name">Mo<span class="omit">hsen</span> Shafiei</h1>
+							<h2 class="role">Frontend Software Engineer</h2>
+						</div>
+					</div>
+					<div class="card">
+						<p class="text">
+							Welcome to my personal website! I am a passionate frontend
+							software engineer with over 6 years of experience in building web
+							applications and developing UI kits. Throughout my career, I have
+							had the privilege of working at esteemed companies such as
+							<span class="company">Apple</span>,
+							<span class="company">Shopee</span>,
+							<span class="company">Snapp</span>
+							and more. As a dedicated professional, I have led a team of 5
+							talented engineers, collaborating closely to deliver high-quality
+							projects. I thrive on challenges and enjoy finding innovative
+							solutions to complex problems. With a strong focus on user
+							experience and cutting-edge technologies, I am committed to
+							creating seamless and visually stunning interfaces.
+						</p>
+					</div>
+					<div class="card">
+						<p class="text">
+							Outside of programming, I enjoy photography, traveling, and
+							finding hidden cafes to enjoy a good coffee.
+						</p>
+					</div>
+					<div class="card">
+						<p class="text">
+							Feel free to get in touch if you'd like to collaborate or have any
+							questions.
+						</p>
+					</div>
+
+					<div class="card">
+						<div class="links">
+							<a class="link" href="/resume.pdf" target="_blank" rel="noopener">
+								Resume
+							</a>
+							<a
+								class="link"
+								href="https://github.com/mohsenshafiei"
+								target="_blank"
+								rel="noopener"
+							>
+								Github
+							</a>
+							<a
+								class="link"
+								href="https://www.linkedin.com/in/mohsen-shafiei-7250847b/"
+								target="_blank"
+								rel="noopener"
+							>
+								LinkedIn
+							</a>
+							<a class="link" href="mailto:mohsenshafieitafreshi@gmail.com">
+								Email me
+							</a>
+							<a class="link" href="tel:+14387798898"> Call me </a>
+							<img
+								id="image1"
+								class="sign"
+								src="download-1.png"
+								alt="Image 1"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="navbar">
+				<div class="navContainer">
+					<a class="nav activeNav" href="/"> Home </a>
+					<a class="nav disable"> Blog </a>
+					<a class="nav disable"> Stories </a>
+					<a class="nav disable"> Tutorials </a>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
