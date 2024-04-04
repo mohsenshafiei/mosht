@@ -2,8 +2,14 @@
 	.wrapper {
 		max-width: 100%;
 	}
+
 	.container {
-		grid-template-columns: 1fr; /* Stacks the two columns on top of each other */
+		max-width: 100%;
+		width: 100%;
+	}
+	.left {
+		max-width: 100%;
+		width: 100%;
 	}
 
 	.name {
@@ -35,6 +41,10 @@
 	}
 
 	.right {
+		display: none;
+	}
+
+	.sign {
 		display: none;
 	}
 }

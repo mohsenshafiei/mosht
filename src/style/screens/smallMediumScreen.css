@@ -4,12 +4,18 @@
 		font-size: 2em; /* Adjust as needed */
 	}
 
-	.wrapper {
+	.container {
 		max-width: 100%;
+		width: 100%;
 	}
 
-	.container {
-		grid-template-columns: 1fr; /* Keeps the two column layout */
+	.left {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.wrapper {
+		max-width: 100%;
 	}
 
 	.name {
@@ -51,5 +57,9 @@
 	.image-container {
 		width: 400px;
 		height: 400px;
+	}
+
+	.sign {
+		/* display: none; */
 	}
 }

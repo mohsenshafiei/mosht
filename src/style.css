@@ -1,5 +1,16 @@
 @import "./style/reset.css";
 @import "./style/color.css";
+@import "./style/screens/extraLargeScreen.css";
+@import "./style/screens/mediumLargeScreen.css";
+@import "./style/screens/smallMediumScreen.css";
+@import "./style/screens/smallScreen.css";
+@import "./style/screens/extraSmallScreen.css";
+
+@media screen and (min-width: 1571px) {
+	.left {
+		max-width: 50%;
+	}
+}
 
 :root {
 	font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
@@ -36,15 +47,15 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	max-width: calc(100vw - 30%);
+	max-width: calc(100vw - 20%);
 	margin: 0 auto;
 }
 
 .container {
-	display: grid;
-	grid-template-columns: 1fr 1fr; /* Two equal columns */
+	display: flex;
 	height: 100vh; /* Adjust the height as needed */
 	min-height: 100vh;
+	align-items: center;
 }
 
 .right,
@@ -253,8 +264,3 @@ body {
 		background-color: #f9f9f9;
 	}
 }
-
-@import "./style/screens/mediumLargeScreen.css";
-@import "./style/screens/smallMediumScreen.css";
-@import "./style/screens/smallScreen.css";
-@import "./style/screens/extraSmallScreen.css";

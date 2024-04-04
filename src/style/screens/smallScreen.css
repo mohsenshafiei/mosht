@@ -1,9 +1,18 @@
 @media screen and (max-width: 767px) {
 	.wrapper {
 		max-width: 100%;
+		min-width: 772px;
+		padding: 10%;
 	}
+
 	.container {
-		grid-template-columns: 1fr; /* Stacks the two columns on top of each other */
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.left {
+		max-width: 100%;
+		width: 100%;
 	}
 
 	.name {
@@ -11,7 +20,7 @@
 	}
 
 	.role {
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 
 	.links {
@@ -41,9 +50,13 @@
 	.img-profile {
 		width: 400px;
 	}
-	
+
 	.image-container {
 		width: 400px;
 		height: 400px;
+	}
+
+	.sign {
+		display: none;
 	}
 }
