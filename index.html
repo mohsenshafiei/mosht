@@ -71,6 +71,15 @@
 			followCursor.style.left = e.pageX + "px";
 			followCursor.style.top = e.pageY + "px";
 		});
+
+		let text = document.getElementById("text");
+		let shadow = "";
+
+		for (let i = 0; i < 20; i++) {
+			shadow += (shadow ? "," : "") + -i * 1 + "px " + i * 1 + "px 0 #d9d9d9";
+		}
+
+		text.style.textShadow = shadow;
 	</script>
 	<body>
 		<div class="wrapper">
@@ -92,10 +101,10 @@
 					</div>
 					<div class="card">
 						<p class="text">
-							Welcome to my personal website! I am a passionate frontend
-							software engineer with over 6 years of experience in building web
-							applications and developing UI kits. Throughout my career, I have
-							had the privilege of working at esteemed companies such as
+							Welcome to my personal website! I am a frontend software engineer
+							with over 6 years of experience in building web applications and
+							developing UI kits. Throughout my career, I have had the privilege
+							of working at esteemed companies such as
 							<span class="company">Apple</span>,
 							<span class="company">Shopee</span>,
 							<span class="company">Snapp</span>
@@ -119,7 +128,6 @@
 							questions.
 						</p>
 					</div>
-
 					<div class="card">
 						<div class="links">
 							<a class="link" href="/resume.pdf" target="_blank" rel="noopener">
@@ -155,6 +163,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div>
 			<div class="navbar">
 				<div class="navContainer">

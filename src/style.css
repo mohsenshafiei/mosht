@@ -5,6 +5,7 @@
 @import "./style/screens/smallMediumScreen.css";
 @import "./style/screens/smallScreen.css";
 @import "./style/screens/extraSmallScreen.css";
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 @media screen and (min-width: 1571px) {
 	.left {
@@ -71,6 +72,10 @@ body {
 .left {
 	text-align: right;
 	row-gap: 2em;
+}
+
+.card {
+	width: 100%;
 }
 
 .info {
@@ -141,12 +146,14 @@ body {
 
 .company {
 	color: var(--ds-amber-600);
-	&:hover {
-		color: var(--ds-amber-700);
-	}
+}
+
+.company:hover {
+	color: var(--ds-amber-700);
 }
 
 .links {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	column-gap: 2em;
@@ -157,9 +164,9 @@ body {
 	color: var(--geist-cyan-dark);
 	font-size: 16px;
 	text-decoration: none;
-	&:hover {
-		color: var(--geist-cyan);
-	}
+}
+.link:hover {
+	color: var(--geist-cyan);
 }
 
 .img-profile {
@@ -179,7 +186,7 @@ body {
 	-webkit-filter: invert(100%); /* Safari/Chrome */
 	filter: invert(100%);
 	transform: rotate(-10deg);
-	margin-left: 60px;
+	margin-left: auto;
 }
 
 .call {
@@ -235,6 +242,24 @@ body {
 	font-size: 14px;
 	color: var(--ds-gray-600);
 	cursor: pointer;
+}
+
+.skillsContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: center;
+	width: 50%;
+	row-gap: 2em;
+}
+
+.label {
+	padding: 4px 18px;
+	text-decoration: none;
+	font-size: 14px;
+	color: var(--ds-gray-600);
+	cursor: pointer;
+	font-family: Fira Code;
 }
 
 .activeNav {
