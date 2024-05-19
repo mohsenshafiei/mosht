@@ -64,23 +64,6 @@
 			data-react-helmet="true"
 		/>
 	</head>
-	<script>
-		document.addEventListener("mousemove", function (e) {
-			var followCursor = document.getElementById("follow-cursor");
-			// Update the position to the cursor's position
-			followCursor.style.left = e.pageX + "px";
-			followCursor.style.top = e.pageY + "px";
-		});
-
-		let text = document.getElementById("text");
-		let shadow = "";
-
-		for (let i = 0; i < 20; i++) {
-			shadow += (shadow ? "," : "") + -i * 1 + "px " + i * 1 + "px 0 #d9d9d9";
-		}
-
-		text.style.textShadow = shadow;
-	</script>
 	<body>
 		<div class="wrapper">
 			<div class="container">
@@ -143,7 +126,7 @@
 							</a>
 							<a
 								class="link"
-								href="https://www.linkedin.com/in/mohsen-shafiei-7250847b/"
+								href="https://www.linkedin.com/in/mohsenshafiei/"
 								target="_blank"
 								rel="noopener"
 							>
@@ -162,9 +145,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div>
 			<div class="navbar">
 				<div class="navContainer">
 					<a class="nav activeNav" href="/"> Home </a>
