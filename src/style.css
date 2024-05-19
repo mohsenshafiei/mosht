@@ -27,10 +27,9 @@
 
 body {
 	margin: 0;
-	min-width: 320px;
 	width: 100%;
 	min-height: 100vh;
-	height: 100vh;
+	height: 100%;
 }
 
 .wrapper {
@@ -46,6 +45,19 @@ body {
 	display: flex;
 	height: calc(100vh - 100px);
 	align-items: center;
+	flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+	.wrapper {
+		max-width: 100%;
+	}
+
+	.container {
+		height: auto;
+		margin: 20px auto;
+		padding: 20px;
+	}
 }
 
 .right,
@@ -240,10 +252,6 @@ body {
 	z-index: 100;
 }
 @media screen and (max-width: 767px) {
-	.navbar {
-		display: none;
-	}
-
 	.sign {
 		display: none;
 	}

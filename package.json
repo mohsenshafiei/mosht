@@ -1,18 +1,21 @@
 {
-  "name": "mosht",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "pnpm clean && tsc && vite build",
-    "preview": "vite preview",
-    "clean": "rm -rf ./dist"
-  },
-  "devDependencies": {
-    "sass": "^1.63.3",
-    "typescript": "^5.0.2",
-    "vite": "^4.3.9"
-  },
-  "files": ["dist"]
+	"name": "mosht",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"host": "vite --host",
+		"build": "pnpm clean && tsc && vite build",
+		"preview": "vite preview",
+		"clean": "rm -rf ./dist"
+	},
+	"devDependencies": {
+		"sass": "^1.63.3",
+		"typescript": "^5.0.2",
+		"vite": "^4.3.9"
+	},
+	"files": [
+		"dist"
+	]
 }
