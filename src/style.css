@@ -1,9 +1,18 @@
 @import "./style/reset.css";
 @import "./style/color.css";
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+@font-face {
+  font-family: "Wotfard Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Wotfard Regular"),
+    url("../public/fonts/Wotfard-Regular.woff") format("woff");
+}
+
 :root {
   /* Fonts */
-  --font-family-default: "SF Pro Display", "SF Pro Icons", "Helvetica Neue",
+  --font-family-default: "Wotfard Regular", "SF Pro Icons", "Helvetica Neue",
     "Helvetica", "Arial", sans-serif;
   --line-height-default: 1.5;
   --font-weight-default: 400;
